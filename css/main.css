@@ -1,0 +1,129 @@
+/*! part of normalize.css v1.0.1 | MIT License | git.io/normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}
+[hidden]{display:none}
+html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{margin:0}
+img{border:0;-ms-interpolation-mode:bicubic}
+figure{margin:0}
+button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}
+button,input{line-height:normal}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}
+button[disabled],input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+
+/* card flip */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+body {
+  background: url(../img/cloth.jpg) repeat;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.container {
+  padding: 20px;
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+.card-holder {
+  position: relative;
+  float: left;
+  margin: 10px auto;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all .4s linear;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: all .4s linear;
+  -o-transform-style: preserve-3d;
+  -o-transition: all .4s linear;
+  transform-style: preserve-3d;
+  transition: all .4s linear;
+}
+
+.card-holder.open .card,
+.card-holder.solved .card {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-box-shadow: 5px 5px 5px #053A05;
+  -moz-box-shadow: 5px 5px 5px #053A05;
+  -ms-box-shadow: 5px 5px 5px #053A05;
+  -o-box-shadow: 5px 5px 5px #053A05;
+  box-shadow: 5px 5px 5px #053A05;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  border: 10px solid #fff;
+  border-radius: 10px;
+  background-color: #a90329 !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+  background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+  background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+  background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+  background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+  background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
+
+  /* webkit special */
+  background-image: -webkit-repeating-linear-gradient(transparent, transparent 50px, rgba(0, 0, 0, .4) 50px, rgba(0, 0, 0, .4) 53px, transparent 53px, transparent 63px, rgba(0, 0, 0, .4) 63px, rgba(0, 0, 0, .4) 66px, transparent 66px, transparent 116px, rgba(0, 0, 0, .5) 116px, rgba(0, 0, 0, .5) 166px, rgba(255, 255, 255, .2) 166px, rgba(255, 255, 255, .2) 169px, rgba(0, 0, 0, .5) 169px, rgba(0, 0, 0, .5) 179px, rgba(255, 255, 255, .2) 179px, rgba(255, 255, 255, .2) 182px, rgba(0, 0, 0, .5) 182px, rgba(0, 0, 0, .5) 232px, transparent 232px), -webkit-repeating-linear-gradient(-180deg, transparent, transparent 50px, rgba(0, 0, 0, .4) 50px, rgba(0, 0, 0, .4) 53px, transparent 53px, transparent 63px, rgba(0, 0, 0, .4) 63px, rgba(0, 0, 0, .4) 66px, transparent 66px, transparent 116px, rgba(0, 0, 0, .5) 116px, rgba(0, 0, 0, .5) 166px, rgba(255, 255, 255, .2) 166px, rgba(255, 255, 255, .2) 169px, rgba(0, 0, 0, .5) 169px, rgba(0, 0, 0, .5) 179px, rgba(255, 255, 255, .2) 179px, rgba(255, 255, 255, .2) 182px, rgba(0, 0, 0, .5) 182px, rgba(0, 0, 0, .5) 232px, transparent 232px), -webkit-repeating-linear-gradient(-35deg, transparent, transparent 2px, rgba(0, 0, 0, .2) 2px, rgba(0, 0, 0, .2) 3px, transparent 3px, transparent 5px, rgba(0, 0, 0, .2) 5px);
+}
+
+.back {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  background-color: #fff;
+  border: 10px solid #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
