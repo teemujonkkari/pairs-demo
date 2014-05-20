@@ -10,3 +10,8 @@ tested with:
 - iOS Safari
 - N9 Browser (Webkit)
 - N9 Firefox 14
+
+
+In 2014
+
+- Some minor fixes to fit on iPad
